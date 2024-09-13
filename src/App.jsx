@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import { Container } from "@mui/material";
+import "./App.css";
+import { useTheme } from "@mui/material/styles";
+import KanbanBoard from "./Pages/KanbanBoard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const theme = useTheme()
   return (
-    <>
-
-    </>
-  )
+    <Container sx={{ color: theme.palette.secondary.main }}>
+      <KanbanBoard />
+    </Container>
+  );
 }
 
-export default App
+export default App;
